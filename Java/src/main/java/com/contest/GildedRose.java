@@ -3,6 +3,10 @@ package com.contest;
 class GildedRose {
 	private  static final  int  GOODSQUALITY=50;
 	private  static final  int  SULFURASQUALITY=80;
+	private  static final  String AGEDBRIE="Aged Brie";
+	private  static final  String SULFURAS="Sulfuras";
+	private  static final  String  BACKSTAGEPASSES="Backstage passes";
+	
     Item[] items;
 
     public GildedRose(Item[] items) {
