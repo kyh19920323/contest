@@ -26,9 +26,8 @@ public class GildedRoseTest {
         assertEquals(19, gildedRose.items[0].quality);
         
         gildedRose.updateSellInAndQuality((gildedRose.items[0]));
-        
         assertEquals(8, (gildedRose.items[0]).sellIn);
-        assertEquals(19, gildedRose.items[0].quality);
+        assertEquals(18, gildedRose.items[0].quality);
         
         
     }

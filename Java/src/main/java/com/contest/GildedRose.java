@@ -15,6 +15,7 @@ class GildedRose {
     
     public  void  updateSellInAndQuality(Item item){
     	item.sellIn--;
+    	item.quality--;
     }
     
 }
