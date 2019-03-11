@@ -19,20 +19,31 @@ class GildedRose {
     }
     
     public  void  updateSellInAndQuality(Item item){
-    	if(checkSellInIsValid(item)){ 
-    		item.sellIn--;
-    		if(AGEDBRIE.equals(item.name)){ //品质增加
-    			 if(item.quality<=GOODSQUALITY){
-    				 item.quality++;
-    			 };
-    		}else {
-    			if(item.quality>=0){
-        			item.quality--;
-        		}
-    		}
-    	}
+    	if(AGEDBRIE.equals(item.name)){ //品质增加
+			 if(item.quality<=GOODSQUALITY){
+				 item.quality++;
+			 };
+			 if(checkSellInIsValid(item)){ 
+		    		item.sellIn--;
+		    	}else {
+		    		item.sellIn=item.sellIn-2;
+		    	}
+		}else if(SULFURAS.equals(item.name)) {
+			
+		}
     	
-    	
+    }
+    public  void  updateSellInAndQualityGoodNameBackstagePasses(BackstagePasses backstagePasses){
+    	if(AGEDBRIE.equals(backstagePasses.name)){ //品质增加
+			 if(backstagePasses.quality<=GOODSQUALITY){
+				 backstagePasses.quality++;
+			 };
+			 if(checkSellInIsValid(backstagePasses)){ 
+				 backstagePasses.sellIn--;
+		    	}else {
+		    		backstagePasses.sellIn=backstagePasses.sellIn-2;
+		    	}
+		}
     }
     
     public    boolean checkSellInIsValid(Item item) {
