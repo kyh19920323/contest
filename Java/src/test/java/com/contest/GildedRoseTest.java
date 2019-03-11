@@ -83,13 +83,14 @@ public class GildedRoseTest {
     
     @Test
     public void check_item_BackstagePasses() {
-        Item[] items = new Item[] { new BackstagePasses("Backstage passes", 10, 20,10) };
+    	BackstagePasses[] items = new BackstagePasses[] { new BackstagePasses("Backstage passes", 10, 20,11) };
         GildedRose gildedRose = new GildedRose(items);
-        gildedRose.updateSellInAndQuality(gildedRose.items[0]);
-        assertEquals(10, (gildedRose.items[0]).sellIn);
-        assertEquals(10, gildedRose.items[0].quality);
+        gildedRose.updateSellInAndQualityGoodNameBackstagePasses(items[0]);
+        assertEquals(9, (gildedRose.items[0]).sellIn);
+        assertEquals(21, gildedRose.items[0].quality);
         
     }
+    
     
     
 }
