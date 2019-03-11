@@ -19,13 +19,24 @@ class GildedRose {
     }
     
     public  void  updateSellInAndQuality(Item item){
-    	item.sellIn--;
-    	item.quality--;
+    	if(checkSellInIsValid(item)){ 
+    		item.sellIn--;
+    		if(AGEDBRIE.equals(item.name)){ //品质增加
+    			 if(item.quality<=GOODSQUALITY){
+    				 item.quality++;
+    			 };
+    		}else {
+    			if(item.quality>=0){
+        			item.quality--;
+        		}
+    		}
+    	}
+    	
     	
     }
     
     public    boolean checkSellInIsValid(Item item) {
-    	return item.sellIn>=0?false:true;
+    	return item.sellIn>=0?true:false;
     }
     
 }

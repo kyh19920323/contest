@@ -45,9 +45,20 @@ public class GildedRoseTest {
         assertEquals(8, (gildedRose.items[0]).sellIn);
         assertEquals(18, gildedRose.items[0].quality);
          boolean validFlage= gildedRose.checkSellInIsValid(gildedRose.items[0]);
-          if (validFlage) {
+          if (!validFlage) {
 			System.out.println(validFlage);
 		}
+        
+    }
+    
+    @Test
+    public void check_item_AgeBrie() {
+        Item[] items = new Item[] { new Item("Aged Brie", 10, 20) };
+        GildedRose gildedRose = new GildedRose(items);
+        
+        gildedRose.updateSellInAndQuality(gildedRose.items[0]);
+        assertEquals(9, (gildedRose.items[0]).sellIn);
+        assertEquals(21, gildedRose.items[0].quality);
         
     }
     
