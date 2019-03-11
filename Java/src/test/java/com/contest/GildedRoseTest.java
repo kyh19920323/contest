@@ -84,8 +84,8 @@ public class GildedRoseTest {
     @Test
     public void check_item_BackstagePasses() {
     	BackstagePasses[] items = new BackstagePasses[] { new BackstagePasses("Backstage passes", 10, 20,11) };
-        GildedRose gildedRose = new GildedRose(items);
-        gildedRose.updateSellInAndQualityGoodNameBackstagePasses(items[0]);
+        GildedRoseSub gildedRose = new GildedRoseSub(items);
+        gildedRose.updateSellInAndQuality(items[0]);
         assertEquals(9, (gildedRose.items[0]).sellIn);
         assertEquals(21, gildedRose.items[0].quality);
         
