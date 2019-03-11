@@ -1,6 +1,7 @@
 package com.contest;
 
 class GildedRose {
+	
     Item[] items;
 
     public GildedRose(Item[] items) {
@@ -11,4 +12,9 @@ class GildedRose {
         items[0].sellIn = 9;
         items[0].quality = 19;
     }
+    
+    public  void  updateSellInAndQuality(Item item){
+    	item.sellIn--;
+    }
+    
 }
