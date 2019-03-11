@@ -1,7 +1,8 @@
 package com.contest;
 
 class GildedRose {
-	
+	private  static final  int  GOODSQUALITY=50;
+	private  static final  int  SULFURASQUALITY=80;
     Item[] items;
 
     public GildedRose(Item[] items) {
@@ -16,6 +17,11 @@ class GildedRose {
     public  void  updateSellInAndQuality(Item item){
     	item.sellIn--;
     	item.quality--;
+    	
+    }
+    
+    public    boolean checkSellInIsValid(Item item) {
+    	return item.sellIn>=0?false:true;
     }
     
 }
