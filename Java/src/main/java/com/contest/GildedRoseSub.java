@@ -16,14 +16,22 @@ public class GildedRoseSub extends GildedRose {
 	  }else {
 		  backstagePasses.quality=0;
   	  }
-	if(backstagePasses.showdate>=0){
-		backstagePasses.showdate--;
-	}
-	if(checkSellInIsValid(backstagePasses)){ 
-		backstagePasses.sellIn--;
-	}else {
-		backstagePasses.sellIn=backstagePasses.sellIn-2;
-	}
+		checkDate(backstagePasses);
 }
+
+	private void checkDate(BackstagePasses backstagePasses) {
+		if(backstagePasses.showdate>=0){
+			backstagePasses.showdate--;
+		}
+		calculationSellIn(backstagePasses);
+	}
+
+	private void calculationSellIn(BackstagePasses backstagePasses) {
+		if(checkSellInIsValid(backstagePasses)){ 
+			backstagePasses.sellIn--;
+		}else {
+			backstagePasses.sellIn=backstagePasses.sellIn-2;
+		}
+	}
 
 }
